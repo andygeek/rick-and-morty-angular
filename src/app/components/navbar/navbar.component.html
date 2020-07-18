@@ -1,0 +1,19 @@
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <h1>Rick and Morty</h1>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#miLista">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="miLista">
+            <div class="navbar-nav">
+                <a routerLinkActive="active" [routerLink]="['home']" class="nav-link">Home</a>
+                <a routerLinkActive="active" [routerLink]="['characters']" class="nav-link">Characters</a>
+                <a routerLinkActive="active" [routerLink]="['about']" class="nav-link">About</a>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" (keyup.enter)="search(searchText.value)"  #searchText >
+                <button (click)="search(searchText.value)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
